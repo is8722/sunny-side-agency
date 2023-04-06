@@ -1,0 +1,394 @@
+@media screen and (max-width: 1024px) {
+    .img-desktop {
+        display: none;
+    }
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100px;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.about-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    padding: 20%;
+    background-color: #f2f2f2;
+}
+
+.about-text h2 {
+    font-family: "Fraunces", sans-serif;
+    font-size: 36px;
+    color: hsl(212, 27%, 19%);
+    font-weight: 900;
+}
+
+.about-text p {
+    color: hsl(213, 9%, 39%);
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 32px;
+}
+
+.about-text a {
+    display: block;
+    font-family: "Fraunces", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+    padding: 0 8px;
+    color: hsl(212, 27%, 19%);
+    cursor: pointer;
+    margin-top: 32px;
+    font-weight: 900;
+    z-index: 0;
+}
+
+.about-text a::before {
+
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    bottom: -3px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+    transition: 0.2s;
+}
+
+.about-text a.yellow::before {
+    text-decoration: yellow;
+}
+
+.about-text a.red::before {
+    text-decoration: red;
+}
+
+.about-text a:hover::before {
+    opacity: 1;
+}
+
+
+section#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.service {
+    position: relative;
+}
+
+.service>img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.service-text {
+    padding: 350px 25% 5%;
+    text-align: center;
+}
+
+.service-text.graphic-design {
+    color: hsl(167, 40%, 24%);
+}
+
+.service-text.photography {
+    color: hsl(198, 62%, 26%);
+}
+
+.service-text h2 {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+.service-text p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.toolbar>img.logo {
+    width: 200px;
+    min-width: 200px;
+}
+
+.toolbar nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.toolbar nav li a {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.toolbar nav li a:not(.contact)::before {
+
+    position: absolute;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+    transition: transform 0.3s;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.toolbar nav li a:not(.contact):hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.toolbar nav li a.CONTACT {
+    font-family: "Fraunces", sans-serif;
+    color: hsl(212, 27%, 19%);
+    background-color: white;
+    padding: 16px 24px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.toolbar nav li a.contact:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toolbar>button.hamburger {
+    display: none;
+    width: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.toolbar>button.hamburger svg {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #90d4c5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px;
+}
+
+footer>svg.logo {
+    color: hsl(168, 34%, 41%);
+    width: 160px;
+    height: auto;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li {
+    cursor: pointer;
+}
+
+footer ul li a {
+    color: hsl(168, 34%, 41%);
+    transition: 0.2s;
+}
+
+footer ul li a:hover {
+    color: white;
+}
+
+ul.links {
+    gap: 56px;
+    margin-top: 32px;
+}
+
+ul.links li a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.logo {
+    margin-top: 72px;
+    gap: 26px;
+}
+
+.logo li {
+    font-size: 24px;
+}
+
+section#testimonials {
+    padding: 10%;
+    background-color: white;
+}
+
+section#testimonials h2 {
+    text-align: center;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(210, 4%, 67%);
+    font-weight: 900;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 56px;
+    padding: 0 24px;
+}
+
+.testimonial>img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.testimonial>p {
+    margin-top: 56px;
+    font-size: 18px;
+    line-height: 28px;
+    color: hsl(212, 27%, 19%);
+}
+
+.people {
+    margin-top: 56px;
+}
+
+.people p.name {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+    margin: 0;
+}
+
+.people p.Fonction {
+    color: hsl(210, 4%, 67%);
+    ;
+    font-size: 16px;
+    margin-top: 14px;
+}
+
+section#pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+section#pictures img {
+    width: 400px;
+}
+
+.header-content>.content h1 {
+    position: absolute;
+    width: 750px;
+    height: 69px;
+    left: 344.5px;
+    top: 195px;
+    font-family: 'Fraunces' 'soFt';
+    font-style: normal;
+    line-height: 69px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-size: 56px;
+    text-transform: uppercase;
+    letter-spacing: 8, 75px;
+
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .header-content > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  
+  .header-content > .content {
+    position: absolute;
+    display: grid;
+    gap: 50px;
+    place-items: center;
+    left: 100px;
+    top: 100px;
+    
+
+  }
+  
+  .header-content > .content > img {
+    height: 120px;
+    width: auto;
+    position: absolute;
+    top: 18rem;
+    left: 40%;
+    transform: translateX(-50%);
+    
+    
+  }
+
+  
